@@ -1,6 +1,7 @@
 asgiref==3.9.1
 attrs==25.3.0
 Django==5.2.6
+django-cors-headers==4.9.0
 djangorestframework==3.16.1
 djangorestframework_simplejwt==5.5.1
 dotenv==0.9.9
@@ -8,11 +9,14 @@ drf-extra-fields==3.7.0
 drf-spectacular==0.28.0
 drf-spectacular-sidecar==2025.10.1
 filetype==1.2.0
+gunicorn==23.0.0
 inflection==0.5.1
 jsonschema==4.25.1
 jsonschema-specifications==2025.9.1
 load-dotenv==0.1.0
+packaging==25.0
 pillow==11.3.0
+psycopg2==2.9.10
 PyJWT==2.10.1
 python-dotenv==1.1.1
 PyYAML==6.0.3
