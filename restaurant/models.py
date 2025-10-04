@@ -62,8 +62,9 @@ class MenuItem(models.Model):
     class Meta:
         ordering = ['name']
 
-        def __str__(self) -> str:
-            return f"{self.category.name}" - {"self.name"}
+    def __str__(self) -> str:
+            category_names = ", ".join([c.name for c in self.categories.all()])
+            return f"{category_names} - {self.name}"
 
 
 class Profile(models.Model):

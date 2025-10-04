@@ -16,6 +16,10 @@ class ProfileSerializer(serializers.ModelSerializer):
 
 
 class MenuItemSerializer(serializers.ModelSerializer):
+    categories = serializers.PrimaryKeyRelatedField(
+        many=True,
+        queryset=MenuCategory.objects.all()
+    )
     class Meta:
         model = MenuItem
         fields = ['id', 'name', 'description', 'price', 'image', 'category', 'is_available', 'preparation_time', 'created_at', 'updated_at']
